@@ -1,153 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Under Maintenance</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0b0c10;
-            color: #c5c6c7;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            perspective: 1000px;
-            text-align: center;
-        }
-
-        .cube {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            transform-style: preserve-3d;
-            transform: rotateX(-20deg) rotateY(30deg);
-            animation: rotate 8s infinite linear;
-        }
-
-        .face {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(32, 34, 37, 0.9);
-            border: 2px solid #66fcf1;
-            box-shadow: 0 0 20px rgba(0, 206, 209, 0.6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            color: #66fcf1;
-            transform-origin: center center;
-        }
-
-        .front {
-            transform: translateZ(100px);
-        }
-
-        .back {
-            transform: rotateY(180deg) translateZ(100px);
-        }
-
-        .left {
-            transform: rotateY(-90deg) translateZ(100px);
-        }
-
-        .right {
-            transform: rotateY(90deg) translateZ(100px);
-        }
-
-        .top {
-            transform: rotateX(90deg) translateZ(100px);
-        }
-
-        .bottom {
-            transform: rotateX(-90deg) translateZ(100px);
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotateX(-20deg) rotateY(30deg);
-            }
-
-            100% {
-                transform: rotateX(-20deg) rotateY(390deg);
-            }
-        }
-
-        h1 {
-            color: #45a29e;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #c5c6c7;
-            font-size: 1.2em;
-        }
-
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .footer p {
-            margin: 10px 0;
-            color: #c5c6c7;
-            font-size: 1.2em;
-        }
-
-        .contact-button {
-            background-color: #45a29e;
-            color: #0b0c10;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(69, 162, 158, 0.5);
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-button:hover {
-            background-color: #66fcf1;
-        }
-    </style>
+    <title>Kuldeep Kumar Jha | Cyber Security Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Page Under Maintenance</h1>
-        <div class="cube">
-            <div class="face front">We'll</div>
-            <div class="face back">Be Back</div>
-            <div class="face left">Soon!</div>
-            <div class="face right">Updating</div>
-            <div class="face top">Stay Tuned</div>
-            <div class="face bottom">Thanks!</div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header/Navbar -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">KULDEEP KUMAR JHA</span>
+                <span class="logo-glow"></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </div>
-        <p>We are currently working on the site. Please check back later.</p>
-    </div>
+    </header>
 
-    <div class="footer">
-        <p>Can't resist to wait? Feel free to contact us for any queries!</p>
-        <a href="mailto:kuldeepkrjha01@gmail.com" class="contact-button">I'm One Click Away</a>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles" id="particles-js"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">KULDEEP KUMAR JHA</span>
+                <span class="title-line typing-text"></span>
+            </h1>
+            <p class="hero-subtitle">Cyber Security Researcher | Digital Forensics Expert | Quantum-Resilient Systems</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button golden-button">Get In Touch</a>
+                <a href="#projects" class="cta-button outline-button">View Projects</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
 
-    <script>
-        // Optional: You can add any additional JavaScript here if needed
-    </script>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-frame">
+                  <div class="image-glow"></div>
+                  <img src="images/Profile/prof.jpg" alt="Kuldeep Kumar Jha" class="profile-image">
+                    <div class="profile-placeholder"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3 class="about-title">Cyber Security Specialist</h3>
+                <p class="about-text">
+                    Integrated M.Tech graduate in Computer Science and Engineering (Cyber Security) from VIT Bhopal University with a CGPA of 8.62. Passionate about quantum-resilient systems, digital forensics, and network security.
+                </p>
+                <div class="about-info">
+                    <div class="info-item">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value">Kuldeep Kumar Jha</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">kuldeepkrjha01@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Education:</span>
+                        <span class="info-value">Intg. M-Tech, VIT Bhopal (2021-25)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Specialization:</span>
+                        <span class="info-value">Cyber Security</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Resume:</span>
+                        <a class="resume-download" href="https://drive.google.com/file/d/1lQMXin7mY3_19vaNUQBPOQFWMmvgxLF5/view?usp=sharing" target="_blank">Download</a>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <h4 class="skills-title">Technical Skills</h4>
+                    <div class="skills-radar">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="section-header">
+            <h2 class="section-title">Experience</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <div class="timeline-date">Jun 2024 - Sep 2024</div>
+                    <h3 class="timeline-title">IIT Roorkee, IASC-INSA-NASI Summer Research Fellow</h3>
+                    <p class="timeline-description">Summer Research Fellowship Intern at IIT Roorkee working on advanced security research projects.</p>
+                    <div class="timeline-glow"></div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-card">
+                    <div class="timeline-date">Dec 2023 - Mar 2024</div>
+                    <h3 class="timeline-title">ESec Forte® Technologies Pvt. Ltd.</h3>
+                    <p class="timeline-description">Digital forensic Incident Response Intern, working on real-world forensic cases and incident response.</p>
+                    <div class="timeline-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="projects-filter">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="cyber">Cyber Security</button>
+            <button class="filter-button" data-filter="forensic">Forensics</button>
+            <button class="filter-button" data-filter="research">Research</button>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="research">
+                <div class="project-image">
+                    <div class="image-overlay"> <img src="images/Projects/Rs.png" alt="QRHKMS" class="P1_image"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Quantum-Resilient Hybrid KMS Development</h3>
+                    <p class="project-description">Comprehensive concept analysis on designing an Advanced KMS integrating classical and quantum-resistant algorithms.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Research</span>
+                        <span class="project-tag">Quantum</span>
+                        <span class="project-tag">Cryptography</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-category="cyber">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AIR SPECTER: Hardware based Wi-Fi VAPT Tool</h3>
+                    <p class="project-description">Real-time Wi-Fi vulnerability assessment tool creating rogue access points to compromise networks.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Pen Testing</span>
+                        <span class="project-tag">Hardware</span>
+                        <span class="project-tag">Security</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-category="forensic">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Digital Forensic Custom Workstation (Drona Series)</h3>
+                    <p class="project-description">Custom digital forensic workstations designed for government agencies' security requirements.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Forensics</span>
+                        <span class="project-tag">Hardware</span>
+                        <span class="project-tag">Government</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card" data-category="cyber">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">PASSRACK: Live Port Scanning Tool</h3>
+                    <p class="project-description">Penetration testing tool to scan live ports and execute brute-force attacks.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Pen Testing</span>
+                        <span class="project-tag">Automation</span>
+                        <span class="project-tag">Security</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card" data-category="forensic">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Crypto Transaction Monitoring Platform</h3>
+                    <p class="project-description">Blockchain forensic tool to track, analyze, and visualize cryptocurrency transactions.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Blockchain</span>
+                        <span class="project-tag">Forensics</span>
+                        <span class="project-tag">Finance</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card" data-category="research">
+                <div class="project-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ubuntu OS Hardening Tool</h3>
+                    <p class="project-description">GUI-based security hardening tool for Ubuntu automating OS security configurations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Linux</span>
+                        <span class="project-tag">Security</span>
+                        <span class="project-tag">Automation</span>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 class="contact-title">Contact Information</h3>
+                <div class="info-item">
+                    <i class="fas fa-phone golden-icon"></i>
+                    <span>+91-9122006217</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope golden-icon"></i>
+                    <span>kuldeepkrjha01@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt golden-icon"></i>
+                    <span>VIT Bhopal University, Madhya Pradesh</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Your Name</label>
+                    <div class="form-glow"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Your Email</label>
+                    <div class="form-glow"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" required>
+                    <label for="subject">Subject</label>
+                    <div class="form-glow"></div>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Your Message</label>
+                    <div class="form-glow"></div>
+                </div>
+                <button type="submit" class="submit-button golden-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-text">KULDEEP</span>
+                <span class="logo-glow"></span>
+            </div>
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#projects" class="footer-link">Projects</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kuldeep Kumar Jha. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
