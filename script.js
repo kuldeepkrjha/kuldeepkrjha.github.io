@@ -52,7 +52,7 @@ navLinks.forEach(link => {
 
 // Typing Effect
 const typingText = document.querySelector('.typing-text');
-const texts = ["Cyber Security Specialist", "Digital Forensics Expert", "Quantum-Resilient Researcher"];
+const texts = ["Cyber Security Ressearcher", "Digital Forensics Analyst", "Quantum-Resilient Methods Researcher"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
